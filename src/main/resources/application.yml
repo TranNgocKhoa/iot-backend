@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  error:
+    include-stacktrace: on_param
+
+spring:
+  web:
+    resources:
+      add-mappings: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  data:
+    mongodb:
+      authentication-database: admin
+      password: pass12345
+      username: root
+      host: localhost
+      port: 27017
+      database: iot
+
+
+logging:
+  level:
+    org.springframework.web.bind.annotation: DEBUG
+    org.springframework.data: DEBUG
